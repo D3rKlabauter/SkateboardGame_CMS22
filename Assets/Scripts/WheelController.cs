@@ -46,7 +46,7 @@ public class WheelController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
 
         
         // Initialize OSC
@@ -133,6 +133,8 @@ public class WheelController : MonoBehaviour
         {
             audioSource.PlayOneShot(collectSound);
 
+            audioSource.Play();
+
             other.gameObject.SetActive(false);
 
             count++;
@@ -141,18 +143,14 @@ public class WheelController : MonoBehaviour
 
 
         }
+       
 }
-
     private void OnCollisionEnter(Collision collision)
     {
-        accelaration = 0f;
+        audioSource.Play;
 
-        backgroundMusic.Stop();
-        audioSource.PlayOneShot(deathSound);
+        audioSource.PlayOneShot(collectSound);
 
-        //winLooseText.text = "G A M E  O V E R";
 
-        // Go back to menu and so on...
-        //Invoke("BackToMenu", 5.0f);
     }
 }

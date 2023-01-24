@@ -3,7 +3,18 @@ guid: 4248fc8e07a6a9744919f41c5e6a91ba
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - frontRight: {instanceID: 0}
+  - frontLeft: {instanceID: 0}
+  - backRight: {instanceID: 0}
+  - backLeft: {instanceID: 0}
+  - frontRightTransform: {instanceID: 0}
+  - frontLeftTransform: {instanceID: 0}
+  - backRightTransform: {instanceID: 0}
+  - backLeftTransform: {instanceID: 0}
+  - collectSound: {fileID: 8300000, guid: b0085279fbe83b1458655891fa00decb, type: 3}
+  - deathSound: {fileID: 8300000, guid: 1aa1ab6fb9300354fb4dea3888a41395, type: 3}
+  - backgroundMusic: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
