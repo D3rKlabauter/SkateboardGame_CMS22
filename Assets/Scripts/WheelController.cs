@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 using extOSC;
 
 public class WheelController : MonoBehaviour
@@ -19,6 +20,12 @@ public class WheelController : MonoBehaviour
     public AudioClip collectSound;
     public AudioClip deathSound;
 
+<<<<<<< Updated upstream
+=======
+    public TextMeshProUGUI countText;
+    //public TextMeshProUGUI winLooseText;
+
+>>>>>>> Stashed changes
     public AudioSource backgroundMusic;
     private AudioSource audioSource;
 
@@ -57,7 +64,11 @@ public class WheelController : MonoBehaviour
 
         count = 0;
         maxCount = GameObject.FindGameObjectsWithTag("Collectables").Length;
+<<<<<<< Updated upstream
         //SetCountText();
+=======
+        SetCountText();
+>>>>>>> Stashed changes
     }
 
     
@@ -134,6 +145,7 @@ public class WheelController : MonoBehaviour
             audioSource.PlayOneShot(collectSound);
 
             other.gameObject.SetActive(false);
+<<<<<<< Updated upstream
 
             count++;
             Debug.Log("counter = " + count);
@@ -142,6 +154,19 @@ public class WheelController : MonoBehaviour
 
         }
 }
+=======
+
+            count++;
+
+            SetCountText();
+
+            Debug.Log("counter = " + count);
+            //SetCountText();
+
+
+        }
+    }
+>>>>>>> Stashed changes
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -154,5 +179,11 @@ public class WheelController : MonoBehaviour
 
         // Go back to menu and so on...
         //Invoke("BackToMenu", 5.0f);
+    }
+
+    private void SetCountText()
+    {
+        //countText.text = "Count: " + count.ToString() + " | " + maxCount.ToString();
+        countText.text = "Count:";
     }
 }
